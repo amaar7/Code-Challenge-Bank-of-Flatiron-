@@ -10,15 +10,16 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8001/transactions')
+    fetch('http://localhost:8001/transactions')  // Change the port to 3000
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setTransactions(data.transactions);
         setFilteredTransactions(data.transactions); // Initialize filteredTransactions
       })
       .catch((error) => console.error('Error fetching data: ', error));
   }, []);
-
+  
   // Updated and filteredTransactions based on the search term
   useEffect(() => {
     const filtered = transactions.filter((transaction) =>

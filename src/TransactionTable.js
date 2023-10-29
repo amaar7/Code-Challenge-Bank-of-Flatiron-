@@ -1,9 +1,10 @@
 import React from 'react';
-
+  
 function TransactionTable({ transactions }) {
     if (!transactions || transactions.length === 0) {
-        return <p>No transactions to display.</p>;
-      }
+      return <p>No transactions to display.</p>;
+    }  
+
   return (
     <table>
       <thead>
