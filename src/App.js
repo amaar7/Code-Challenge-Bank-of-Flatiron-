@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import TransactionTable from './TransactionTable';
 import TransactionForm from './TransactionForm';
@@ -6,7 +6,7 @@ import SearchBar from './SearchBar';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
-  const [filteredTransactions, setFilteredTransaction] = useState([]);
+  const [filteredTransactions, setFilteredTransactions] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
@@ -14,6 +14,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setTransactions(data.transactions);
+        setFilteredTransactions(data.transactions); // Initialize filteredTransactions
       })
       .catch((error) => console.error('Error fetching data: ', error));
   }, []);
