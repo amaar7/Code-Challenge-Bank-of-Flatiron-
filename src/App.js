@@ -14,8 +14,8 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setTransactions(data.transactions);
-        setFilteredTransactions(data.transactions); 
+        setTransactions(data);
+        setFilteredTransactions(data); 
       })
       .catch((error) => {
         console.error('Error fetching data: ', error);
