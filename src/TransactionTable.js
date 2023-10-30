@@ -9,10 +9,10 @@ function TransactionTable({ transactions }) {
     <table>
       <thead>
         <tr>
-          <th>Date</th>
-          <th>Description</th>
-          <th>Category</th>
-          <th>Amount</th>
+          <th className="table-header">Date</th>
+          <th className="table-header">Description</th>
+          <th className="table-header">Category</th>
+          <th className="table-header">Amount</th>
         </tr>
       </thead>
       <tbody>

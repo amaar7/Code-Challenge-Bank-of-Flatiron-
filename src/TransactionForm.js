@@ -54,7 +54,7 @@ function TransactionForm({ transactions, setTransactions }) {
         value={newTransaction.amount}
         onChange={handleInputChange}
       />
-      <button type="submit">Add Transaction</button>
+      <button type="submit" className='add-transaction-button'>Add Transaction</button>
     </form>
   );
 }
